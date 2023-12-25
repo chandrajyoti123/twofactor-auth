@@ -38,8 +38,8 @@ app.post("/api/2fauth/singup", async (req, res) => {
     host: "smtp.ethereal.email",
     port: 587,
     auth: {
-      user: 'marcel.harris28@ethereal.email',
-      pass: '5EP2RmKvwgqDTxK1yW'
+      user: 'chet.kunde@ethereal.email',
+      pass: '91Gjqqrm7Qva6Fw2nM'
     },
   });
 
