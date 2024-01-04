@@ -11,12 +11,15 @@ const app = express();
 app.use(express.json());
 const __dirname = path.resolve();
 
+
+
+
 // ---mongodb connected ----
 
-const connectMongodb = async () => {
+    const connectMongodb = async () => {
   const response = await mongoose.connect(process.env.MONGODB_URI);
 
-  if (response) {
+    if (response) {
     console.log("mongodb  added successfully");
   }
 };
@@ -38,8 +41,8 @@ app.post("/api/2fauth/singup", async (req, res) => {
     host: "smtp.ethereal.email",
     port: 587,
     auth: {
-      user: 'chet.kunde@ethereal.email',
-      pass: '91Gjqqrm7Qva6Fw2nM'
+      user: 'verona.johnston59@ethereal.email',
+       pass: 'eTeAXAbRvhzkKTUpQT'
     },
   });
 
@@ -96,9 +99,8 @@ app.post("/api/2fauth/singup", async (req, res) => {
  
 });
 
-     if (process.env.NODE_ENV === "production") {
+    if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-
      app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
      })
